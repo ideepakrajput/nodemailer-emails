@@ -53,6 +53,9 @@ To obtain the necessary Client ID and Client Secret:
 1.  Navigate to the [Google Cloud Console](https://console.cloud.google.com/).
 2.  Create a new project or select an existing one.
 3.  **Enable Gmail API**: Go to "APIs & Services" > "Library", search for "Gmail API", and enable it.
+    
+    ![Enable Gmail API](enable_gmail_api.png)
+
 4.  **Create Credentials**:
     -   Go to "APIs & Services" > "Credentials".
     -   Click "Create Credentials" > "OAuth client ID".
@@ -63,7 +66,14 @@ To obtain the necessary Client ID and Client Secret:
         3.  Paste the exact URL: `https://developers.google.com/oauthplayground`
         4.  *Note: Ensure there are no trailing slashes or spaces.*
         5.  Click **Save**.
-5.  Copy the **Client ID** and **Client Secret** and paste them into your `.env` file.
+    
+    ![Create OAuth Client & Add Redirect URL](create_outh_client+redirect_url_add.png)
+
+5.  **Add Test Users**: Don't forget to add your email as a test user if your app is in "Testing" mode.
+
+    ![Add Test Users](add_test_users.png)
+
+6.  Copy the **Client ID** and **Client Secret** and paste them into your `.env` file.
 
 ### 5. Generate Refresh Token
 
@@ -75,6 +85,9 @@ If you need to generate or regenerate your Refresh Token, follow these steps:
 4.  Enter your credentials from the `.env` file:
     -   **OAuth Client ID**: `********************.apps.googleusercontent.com`
     -   **OAuth Client Secret**: `********************`
+    
+    ![Add Own Client ID & Secret](add_own_client+secret.png)
+
 5.  In the scopes list, find and select `https://mail.google.com/`.
 6.  Click **Authorize APIs**.
 7.  Click **Exchange authorization code for tokens**.
