@@ -83,9 +83,19 @@ If you need to generate or regenerate your Refresh Token, follow these steps:
 
 ## Usage
 
-1.  **Prepare Email List**: Create a file named `email_list.txt` in the root directory. Add one email address per line.
-2.  **Prepare Attachments**: Place your resume or attachment in the root directory. Ensure the filename matches the one specified in `index.js` (e.g., `Mohd_Zafar_Resume.pdf`).
-3.  **Execute Application**:
+## Usage
+
+1.  **Prepare Raw Email List**: Create a file named `emails.txt` in the root directory. Add your raw email list (one per line or separated by spaces/commas).
+2.  **Validate Emails**: Run the validator script to clean, validate, and remove duplicate emails.
+    
+    ```bash
+    node emailValidator.js
+    ```
+    
+    *This will generate a clean `email_list.txt` file.*
+
+3.  **Prepare Attachments**: Place your resume or attachment in the root directory. Ensure the filename matches the one specified in `index.js` (e.g., `DeepakRajput.pdf`).
+4.  **Execute Application**:
 
     ```bash
     npm start
@@ -101,7 +111,8 @@ After execution, the application generates:
 
 ```text
 .
-├── email_list.txt          # List of recipient emails
+├── emails.txt              # Raw input email list
+├── email_list.txt          # Cleaned & validated email list
 ├── [resume_name].pdf       # Attachment file
 ├── emailValidator.js       # Email validation utility
 ├── index.js                # Main application entry point
